@@ -4,16 +4,20 @@ import pandas as pd
 from PIL import Image
 
 
-st.title("Streamlit 超入門")
+st.title("試作版Webアプリ")
 
-st.write("プログレスバーの表示")
-"Start"
+st.write("このWebアプリは試作版で内容に意味はありません。")
 
 text=st.text_input("あなたの趣味を教えてください")
-"あなたの趣味",text
+"あなたの趣味は",text
+
 
 condition=st.slider("あなたの今の調子は？",0,100,50)
-"コンディション：",condition
+"あなたのコンディションは：",condition
+if condition>60:
+    st.write("GOOD!")
+else:"頑張って！"
+                 
 
 #left_column, right_column = st.beta
 #button=left_column.button("右カラムに文字を表示")
@@ -34,7 +38,7 @@ st.write("Display Image")
 
 if st.checkbox("写真を見る"):
     img= Image.open("gon.jpg")
-    st.image(img,caption="GON",use_column_width=True)
+    st.image(img,caption="以前飼っていた犬の写真です")
 
 option=st.selectbox(
     "あなたが好きな数字を教えてください",
