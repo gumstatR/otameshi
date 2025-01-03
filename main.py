@@ -41,4 +41,3 @@ option=st.selectbox(
     list(range(1,11))
 )
 "あなたの好きな数字は",option,"です。"
-
